@@ -6,7 +6,8 @@
   {
     "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@0.174.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.174.0/examples/jsm/"
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.174.0/examples/jsm/",
+	    "free2/": "/",
     }
   }
 </script>
@@ -15,7 +16,7 @@
     <script type="module">
 
 
-      
+      import { OrbitUnlimitedControls } from 'free2/OrbitUnlimitedControls.js';
       import * as THREE from 'three';
 
 	    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -31,7 +32,7 @@ document.body.appendChild( renderer.domElement );
 
 
 	    
-const controls = new OrbitControls( camera, renderer.domElement );
+const controls = new OrbitUnlimitedControls( camera, renderer.domElement );
 const loader = new GLTFLoader();
 
 
