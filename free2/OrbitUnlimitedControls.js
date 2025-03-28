@@ -33,7 +33,7 @@ const State = Object.freeze({
 
 const ClickThreshold = 2;
 
-class OrbitUnlimitedControls extends THREE.EventDispatcher {
+export class OrbitUnlimitedControls extends THREE.EventDispatcher {
   constructor(object, domElement) {
     super();
     this.object = object;
@@ -416,5 +416,3 @@ class OrbitUnlimitedControls extends THREE.EventDispatcher {
     this.object.up.copy(up);
   }
 }
-
-export default OrbitUnlimitedControls;
